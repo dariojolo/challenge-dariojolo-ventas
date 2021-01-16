@@ -6,7 +6,6 @@ import com.dariojolo.app.ventas.servicioventas.repositories.FacturaRespository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
@@ -15,7 +14,7 @@ import java.util.List;
 public class FacturaServiceImpl implements FacturaService {
 
     @Autowired
-    private RestTemplate clienteRest;
+    private WebClientService clientService;
 
     private final FacturaRespository dao;
 
@@ -31,7 +30,7 @@ public class FacturaServiceImpl implements FacturaService {
 
     @Override
     public Factura createFactura(Factura factura) {
-        PreciosValidos preciosValidos = clienteRest.getForObject("https://servicio-productos.herokuapp.com/api/products/precio/" + factura.getModelo(), PreciosValidos.class);
+        PreciosValidos preciosValidos = clientService.getPreciosLimiteWebClient(factura.getModelo());
         if (factura.getPrecio() > preciosValidos.getPrecioMinimo() && factura.getPrecio() < preciosValidos.getPrecioMaximo()) {
             return dao.save(factura);
         }
