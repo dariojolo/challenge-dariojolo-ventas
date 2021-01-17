@@ -1,7 +1,7 @@
 # challenge-sysone-ventas
-La solución propuesta cuenta con dos servicios, el servicio servicio-ventas, es el encargado de manejar las ventas de los vehiculos en el punto de venta y generar las facturas de las mismas.
+La solución propuesta cuenta con dos servicios, el servicio servicio-ventas, es el encargado de manejar las ventas de los vehículos en el punto de venta y generar las facturas de las mismas.
 
-Para cumplir con el proposito expone una API Rest con los siguientes métodos y se ha deplyado en la nube con el servicio de ***Heroku***
+Para cumplir con el propósito expone una API Rest con los siguientes métodos y se ha deployado en la nube con el servicio de ***Heroku***
 
 &nbsp;
 Si lo ejecutamos localmente el servicio va a escuchar en el puerto :8082
@@ -14,7 +14,7 @@ Se debe llamar al servicio con el verbo POST
 ```
 https://servicio-ventas.herokuapp.com/api/ventas/
 ```
-Pasando como parametro en el body un objeto ***JSON*** con el siguiente formato
+Pasando como parámetro en el body un objeto ***JSON*** con el siguiente formato
 ```
    {
     "nombre" : "Dario",
@@ -24,7 +24,7 @@ Pasando como parametro en el body un objeto ***JSON*** con el siguiente formato
     "descripcionGarantia" : "Garantia extendida"
    } 
 ```
-Y obtendremos como respuesta el objeto JSON creado en la base de datos, si el precio del vehiculo esta dentro del rango de precios permitidos
+Y obtendremos como respuesta el objeto JSON creado en la base de datos, si el precio del vehículo está dentro del rango de precios permitidos
 ```
    {
     "id": 2,
@@ -38,10 +38,10 @@ Y obtendremos como respuesta el objeto JSON creado en la base de datos, si el pr
 ***Modificar una venta***
 
 &nbsp;
-Para modificar una venta (solo se puede modificar el modelo y precio del vehiculo, ya que pedia actualizacion parcial) se debe llamar al siguiente metodo con el verbo PUT.
+Para modificar una venta (solo se puede modificar el modelo y precio del vehículo, ya que pedia actualizacion parcial) se debe llamar al siguiente método con el verbo PUT.
 
 &nbsp;
-Pasando como parametro un ID de venta valido y un objeto JSON con los datos a modificar
+Pasando como parámetro un ID de venta válido y un objeto JSON con los datos a modificar
 ```
 https://servicio-ventas.herokuapp.com/api/ventas/2
 ```
@@ -63,10 +63,10 @@ Y obtendremos como resultado el objeto modificado
     "descripcionGarantia": "Garantia extendida"
 }
 ```
-**Obtener informacion de una venta**
+***Obtener información de una venta***
 
 &nbsp;
-Se debe llamar al siguiente metodo con el verbo GET y pasando como parametro el ID de la venta a visualizar
+Se debe llamar al siguiente método con el verbo GET y pasando como parámetro el ID de la venta a visualizar
 ```
 https://servicio-ventas.herokuapp.com/api/ventas/2
 ```
@@ -85,7 +85,7 @@ Y obtendremos el siguiente resultado
 ***Obtener un listado de las ventas / facturas***
 
 &nbsp;
-Se debe llamar al siguiente metodo con el verbo GET 
+Se debe llamar al siguiente método con el verbo GET 
 ```
 GET https://servicio-ventas.herokuapp.com/api/ventas/
 ```
