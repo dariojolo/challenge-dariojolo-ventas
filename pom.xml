@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.dariojolo.app.ventas</groupId>
 	<artifactId>servicio-ventas</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>servicio-ventas</name>
 	<description>Micro servicio de ventas</description>
 
