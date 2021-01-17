@@ -4,7 +4,7 @@ La solución propuesta cuenta con dos servicios, el servicio servicio-ventas, es
 Para cumplir con el proposito expone una API Rest con los siguientes métodos y se ha deplyado en la nube con el servicio de ***Heroku***
 
 &nbsp;
-Si lo ejecutamos localmente el servicio va a escuchar en el puerto :8081
+Si lo ejecutamos localmente el servicio va a escuchar en el puerto :8082
 
 &nbsp;
 ***Crear una venta***
